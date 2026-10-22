@@ -1,0 +1,1439 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070b12">
+  <meta name="color-scheme" content="dark">
+
+  <title>Biju V Don Bosco | Official Website</title>
+  <meta name="description" content="Explore the official portfolio of Biju V Don Bosco, film editor and filmmaker associated with Tamil cinema and South Indian film projects.">
+  <meta name="author" content="John Bosco">
+  <meta name="robots" content="index, follow">
+
+  <!-- Social sharing metadata. Replace the image with your preferred
+       public poster or portrait if you want a different share preview. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Biju V Don Bosco | Official Website">
+  <meta property="og:description" content="Film editing, cinematic storytelling and selected film credits.">
+  <meta property="og:image" content="./images/LOGO.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Biju V Don Bosco | Official Website">
+  <meta name="twitter:description" content="Official portfolio of Biju V Don Bosco.">
+  <meta name="twitter:image" content="./images/LOGO.jpg">
+
+  <link rel="icon" href="./images/LOGO.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script>
+    document.documentElement.classList.add("js");
+  </script>
+
+  <style>
+    :root {
+      --bg: #070b12;
+      --surface: #101925;
+      --surface-2: #152235;
+      --blue: #2588ff;
+      --blue-light: #86c3ff;
+      --green: #43d987;
+      --text: #f3f7ff;
+      --muted: #a9b7ca;
+      --border: rgba(142,175,215,.19);
+      --radius: 20px;
+      --content: 1180px;
+      --nav-height: 70px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-height) + 16px);
+    }
+
+    body {
+      margin: 0;
+      overflow-x: clip;
+      background:
+        radial-gradient(ellipse at 8% 0%, rgba(37,136,255,.12), transparent 35%),
+        radial-gradient(ellipse at 95% 35%, rgba(34,197,94,.055), transparent 30%),
+        var(--bg);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      line-height: 1.75;
+    }
+
+    img, video {
+      max-width: 100%;
+    }
+
+    img {
+      height: auto;
+    }
+
+    a {
+      color: var(--blue-light);
+      text-decoration: none;
+      transition: color .2s ease, border-color .2s ease;
+    }
+
+    a:hover {
+      color: var(--green);
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--green);
+      outline-offset: 4px;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--text);
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.3;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: 8px;
+      left: 8px;
+      z-index: 2000;
+      padding: 10px 16px;
+      transform: translateY(-150%);
+      border-radius: 8px;
+      background: white;
+      color: #07111f;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .gradient-text {
+      background: linear-gradient(100deg, var(--blue-light), #fff, #6ee7a0);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 6px 14px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(113,183,255,.4);
+      border-radius: 50px;
+      color: var(--blue-light);
+      font-size: .77rem;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+    }
+
+    /* Main header */
+
+    .site-header {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      padding: 65px 20px 58px;
+      text-align: center;
+      background: linear-gradient(125deg, #0a1d34, #092c39);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-header::before,
+    .site-header::after {
+      position: absolute;
+      z-index: -1;
+      width: 260px;
+      height: 260px;
+      content: "";
+      border-radius: 50%;
+      filter: blur(85px);
+      opacity: .27;
+      pointer-events: none;
+    }
+
+    .site-header::before {
+      top: -170px;
+      left: 8%;
+      background: var(--blue);
+    }
+
+    .site-header::after {
+      right: 5%;
+      bottom: -210px;
+      background: var(--green);
+    }
+
+    .header-content {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .site-header h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+    }
+
+    .site-header p {
+      max-width: 760px;
+      margin: 20px auto 0;
+      color: #d0dceb;
+      font-size: clamp(1rem, 2vw, 1.15rem);
+    }
+
+    /* Navigation */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      min-height: var(--nav-height);
+      padding: 10px 0;
+      background: rgba(7,11,18,.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white !important;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 800;
+      font-size: .92rem;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      object-fit: cover;
+      border: 2px solid var(--blue);
+      border-radius: 50%;
+    }
+
+    .navbar-nav {
+      gap: 5px;
+    }
+
+    .navbar .nav-link {
+      padding: 9px 11px !important;
+      color: #c6d2e1 !important;
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: var(--blue-light) !important;
+    }
+
+    .navbar-toggler {
+      border-color: var(--border);
+    }
+
+    /* Hero */
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      display: flex;
+      min-height: 430px;
+      align-items: center;
+      overflow: hidden;
+      background: #0c1624;
+    }
+
+    .hero > img {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: .55;
+    }
+
+    .hero::after {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      content: "";
+      background:
+        linear-gradient(90deg, rgba(5,10,18,.94), rgba(5,10,18,.48) 60%, rgba(5,10,18,.78)),
+        linear-gradient(0deg, rgba(5,10,18,.45), transparent);
+    }
+
+    .hero-content {
+      width: min(calc(100% - 36px), 1050px);
+      padding: 75px 0;
+      margin: auto;
+    }
+
+    .hero-content h2 {
+      max-width: 850px;
+      margin-bottom: 18px;
+      font-size: clamp(2.1rem, 5.2vw, 4.2rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .hero-content p {
+      max-width: 650px;
+      color: #e0e8f3;
+      font-size: 1.04rem;
+    }
+
+    .btn-primary-custom,
+    .btn-outline-custom {
+      display: inline-flex;
+      min-height: 46px;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 21px;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      font-weight: 700;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .btn-primary-custom {
+      background: linear-gradient(110deg, #1479ed, #2563eb);
+      color: white;
+    }
+
+    .btn-primary-custom:hover {
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 9px 25px rgba(37,136,255,.23);
+    }
+
+    .btn-outline-custom {
+      border-color: rgba(170,195,225,.38);
+      background: rgba(7,11,18,.2);
+      color: white;
+    }
+
+    .btn-outline-custom:hover {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    /* Sections */
+
+    .section {
+      width: min(var(--content), calc(100% - 40px));
+      padding: 76px 0;
+      margin: auto;
+    }
+
+    .section-heading {
+      margin-bottom: 34px;
+    }
+
+    .section-heading .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 800;
+    }
+
+    .section-heading p {
+      max-width: 720px;
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .card-dark {
+      min-width: 0;
+      padding: 26px;
+      overflow: hidden;
+      background: linear-gradient(145deg, var(--surface-2), var(--surface));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 40px rgba(0,0,0,.13);
+    }
+
+    .profile-layout {
+      display: grid;
+      grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr);
+      align-items: start;
+      gap: 26px;
+    }
+
+    .portrait-frame {
+      padding: 7px;
+      background: linear-gradient(135deg, var(--blue), var(--green));
+      border-radius: 16px;
+    }
+
+    .portrait-frame img {
+      display: block;
+      width: 100%;
+      max-height: 540px;
+      object-fit: contain;
+      background: #0a111b;
+      border-radius: 10px;
+    }
+
+    .profile-table {
+      margin: 20px 0 0;
+      --bs-table-bg: transparent;
+      --bs-table-color: var(--text);
+      --bs-table-border-color: var(--border);
+      --bs-table-striped-bg: rgba(255,255,255,.035);
+      --bs-table-striped-color: var(--text);
+      vertical-align: middle;
+    }
+
+    .profile-table td {
+      padding: 12px 9px;
+      overflow-wrap: anywhere;
+    }
+
+    .profile-table td:first-child {
+      width: 34%;
+      color: var(--blue-light);
+      font-weight: 700;
+    }
+
+    .profile-summary {
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(37,136,255,.08);
+      border-left: 3px solid var(--blue);
+      border-radius: 8px;
+    }
+
+    .profile-summary h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .profile-summary p,
+    .prose {
+      color: #cbd6e5;
+    }
+
+    .profile-summary p {
+      margin-bottom: 0;
+    }
+
+    .prose p {
+      margin-bottom: 20px;
+    }
+
+    .prose p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Information cards */
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .info-card {
+      padding: 25px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      transition: transform .22s ease, border-color .22s ease;
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(37,136,255,.65);
+    }
+
+    .info-card .number {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--blue-light);
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .info-card h3 {
+      font-size: 1.06rem;
+      font-weight: 700;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    /* Career timeline */
+
+    .timeline {
+      display: grid;
+      gap: 20px;
+      margin-left: 8px;
+      padding-left: 28px;
+      border-left: 2px solid rgba(37,136,255,.45);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 23px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      transition: border-color .2s ease, transform .2s ease;
+    }
+
+    .timeline-item:hover {
+      border-color: rgba(37,136,255,.55);
+      transform: translateX(3px);
+    }
+
+    .timeline-item::before {
+      position: absolute;
+      top: 27px;
+      left: -36px;
+      width: 14px;
+      height: 14px;
+      content: "";
+      background: var(--blue);
+      border: 3px solid var(--bg);
+      border-radius: 50%;
+      box-shadow: 0 0 0 3px rgba(37,136,255,.2);
+    }
+
+    .timeline-item .year {
+      color: var(--green);
+      font-size: .86rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .timeline-item h3 {
+      margin: 6px 0 8px;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .table-responsive {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    .career-table {
+      margin: 0;
+      --bs-table-bg: var(--surface);
+      --bs-table-color: #e8eff9;
+      --bs-table-border-color: var(--border);
+      --bs-table-striped-bg: #131f2e;
+      --bs-table-striped-color: #e8eff9;
+      vertical-align: middle;
+    }
+
+    .career-table th {
+      padding: 16px;
+      background: #152d47;
+      color: var(--blue-light);
+      white-space: nowrap;
+    }
+
+    .career-table td {
+      padding: 15px 16px;
+    }
+
+    /* Awards */
+
+    .award-card {
+      padding: 27px;
+      background: linear-gradient(135deg, rgba(37,136,255,.12), rgba(34,197,94,.06));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .award-card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .award-card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    /* Online presence */
+
+    .online-layout {
+      display: grid;
+      grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr);
+      align-items: start;
+      gap: 26px;
+    }
+
+    .online-image {
+      display: block;
+      width: 100%;
+      max-height: 430px;
+      object-fit: contain;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+      gap: 12px;
+    }
+
+    .social-link {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 12px;
+      padding: 15px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      font-weight: 700;
+      overflow-wrap: anywhere;
+    }
+
+    .social-link span {
+      color: var(--blue-light);
+    }
+
+    .social-link:hover {
+      background: #12251f;
+      border-color: var(--green);
+    }
+
+    /* Video */
+
+    .video-frame {
+      max-width: 900px;
+      padding: 10px;
+      margin: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+    }
+
+    .video-frame video {
+      display: block;
+      width: 100%;
+      max-height: 520px;
+      background: #000;
+      border-radius: 10px;
+    }
+
+    .video-caption {
+      padding: 17px 8px 6px;
+      text-align: center;
+    }
+
+    /* Footer */
+
+    .developer-footer {
+      padding: 45px 20px 25px;
+      margin-top: 35px;
+      background: #0c1420;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-inner {
+      display: flex;
+      width: min(var(--content),100%);
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      margin: auto;
+    }
+
+    .developer-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .developer-info img {
+      flex: 0 0 auto;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 3px solid var(--blue);
+      border-radius: 50%;
+    }
+
+    .developer-info h2 {
+      margin: 0 0 6px;
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    .developer-info p,
+    .footer-contact {
+      margin: 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .footer-bottom {
+      width: min(var(--content),100%);
+      padding-top: 20px;
+      margin: 30px auto 0;
+      border-top: 1px solid var(--border);
+      color: #8999ad;
+      text-align: center;
+      font-size: .85rem;
+    }
+
+    /* Scroll reveal. Content remains visible if JavaScript is disabled. */
+
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity .65s ease, transform .65s ease;
+    }
+
+    .js .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Back to top */
+
+    #backToTop {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      display: grid;
+      width: 46px;
+      height: 46px;
+      place-items: center;
+      padding: 0;
+      background: var(--blue);
+      color: white;
+      border: 0;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      box-shadow: 0 6px 22px rgba(0,0,0,.3);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(8px);
+      transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+    }
+
+    #backToTop.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 1200px) {
+      .navbar .nav-link {
+        font-size: .82rem;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .profile-layout,
+      .online-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-layout > .card-dark:first-child {
+        width: 100%;
+        max-width: 650px;
+        margin: auto;
+      }
+
+      .online-image {
+        max-height: 350px;
+      }
+
+      .navbar-nav {
+        padding-top: 10px;
+      }
+
+      .navbar .nav-link {
+        padding: 10px 5px !important;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 576px) {
+      :root {
+        --nav-height: 62px;
+      }
+
+      .site-header {
+        padding: 44px 15px;
+      }
+
+      .site-header h1 {
+        letter-spacing: -.6px;
+      }
+
+      .hero {
+        min-height: 370px;
+      }
+
+      .hero-content {
+        width: calc(100% - 30px);
+        padding: 48px 0;
+      }
+
+      .hero-content h2 {
+        letter-spacing: -.5px;
+      }
+
+      .section {
+        width: calc(100% - 28px);
+        padding: 49px 0;
+      }
+
+      .card-dark {
+        padding: 17px;
+      }
+
+      .info-grid,
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-table td {
+        padding: 10px 6px;
+        font-size: .85rem;
+      }
+
+      .profile-table td:first-child {
+        width: 31%;
+      }
+
+      .timeline {
+        gap: 15px;
+        padding-left: 22px;
+      }
+
+      .timeline-item {
+        padding: 18px;
+      }
+
+      .timeline-item::before {
+        left: -30px;
+      }
+
+      .developer-info {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .career-table th,
+      .career-table td {
+        padding: 12px 10px;
+        font-size: .86rem;
+      }
+
+      #backToTop {
+        right: 13px;
+        bottom: 13px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .js .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-content">
+      <span class="eyebrow">Official Portfolio</span>
+      <h1>
+        BIJU V DON BOSCO<br>
+        <span class="gradient-text">OFFICIAL WEBSITE</span>
+      </h1>
+      <p>
+        Exploring the craft of film editing, visual storytelling and
+        filmmaking in South Indian cinema.
+      </p>
+    </div>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="#home" aria-label="Biju V Don Bosco home">
+        <img class="brand-logo" src="./images/LOGO.jpg" alt="">
+        <span>BIJU V DON BOSCO</span>
+      </a>
+
+      <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#biography">BIOGRAPHY</a></li>
+          <li class="nav-item"><a class="nav-link" href="#career">CAREER</a></li>
+          <li class="nav-item"><a class="nav-link" href="#awards">AWARDS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#online">ONLINE</a></li>
+          <li class="nav-item"><a class="nav-link" href="movie.html">MOVIES</a></li>
+          <li class="nav-item"><a class="nav-link" href="interview.html">INTERVIEWS</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home" aria-labelledby="hero-title">
+    <img src="./images/backdrop.jpg"
+      alt=""
+      fetchpriority="high">
+    <div class="hero-content">
+      <span class="eyebrow">Film Editor · Filmmaker</span>
+      <h2 id="hero-title">
+        Every Frame Has a Story.<br>
+        <span class="gradient-text">Every Cut Has a Purpose.</span>
+      </h2>
+      <p>
+        Discover the professional journey, selected film credits and
+        creative interests of Biju V Don Bosco.
+      </p>
+      <div class="d-flex flex-wrap gap-3 mt-4">
+        <a href="#biography" class="btn-primary-custom">Explore Biography</a>
+        <a href="#career" class="btn-outline-custom">View Career</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content">
+
+    <!-- BIOGRAPHY -->
+    <section class="section reveal" id="biography">
+      <div class="section-heading">
+        <span class="eyebrow">Introduction</span>
+        <h2>About <span class="gradient-text">Biju V Don Bosco</span></h2>
+        <p>A professional profile, personal background and overview of film work.</p>
+      </div>
+
+      <div class="profile-layout">
+        <div class="card-dark">
+          <div class="portrait-frame">
+            <img src="./change photo.jpg"
+              alt="Portrait of Biju V Don Bosco"
+              loading="lazy">
+          </div>
+
+          <div class="table-responsive mt-3">
+            <table class="table table-striped profile-table">
+              <tbody>
+                <tr><td>Born</td><td>15 April 1983</td></tr>
+                <tr><td>Parents</td><td>Leela Mary and Vargees</td></tr>
+                <tr><td>Birthplace</td><td>Nagercoil, Tamil Nadu, India</td></tr>
+                <tr><td>Profession</td><td>Film Editor and Filmmaker</td></tr>
+                <tr><td>Active</td><td>Film credits from 2012 onward</td></tr>
+                <tr>
+                  <td>Spouse</td>
+                  <td><a href="https://www.instagram.com/ramyaimmaculate1983/"
+                    target="_blank" rel="noopener noreferrer">Ramya Immaculate</a></td>
+                </tr>
+                <tr>
+                  <td>Children</td>
+                  <td>
+                    <a href="https://www.instagram.com/d_john_bosco/"
+                      target="_blank" rel="noopener noreferrer">John Bosco</a>,
+                    Joan Bosco
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="profile-summary">
+            <h3>Profile Summary</h3>
+            <p>
+              Biju V Don Bosco is a film editor associated with Tamil cinema
+              and other South Indian film projects. His work includes
+              feature films and web-series editing.
+            </p>
+          </div>
+        </div>
+
+        <div class="card-dark prose">
+          <h3 class="h4 text-white mb-3">Professional Biography</h3>
+          <p>
+            Biju V Don Bosco, also credited as V Don Bosco, is a film editor
+            from Tamil Nadu. His film credits include
+            <a href="https://en.wikipedia.org/wiki/Sundarapandian"
+              target="_blank" rel="noopener noreferrer">Sundarapandian</a>,
+            <a href="https://en.wikipedia.org/wiki/Idhu_Kathirvelan_Kadhal"
+              target="_blank" rel="noopener noreferrer">Idhu Kathirvelan Kadhal</a>,
+            <a href="https://en.wikipedia.org/wiki/Nayyapudai"
+              target="_blank" rel="noopener noreferrer">Nayyapudai</a>,
+            <a href="https://en.wikipedia.org/wiki/Kombu_Vatcha_Singamda"
+              target="_blank" rel="noopener noreferrer">Kombu Vatcha Singamda</a>
+            and the web series
+            <a href="https://en.wikipedia.org/wiki/Sengalam"
+              target="_blank" rel="noopener noreferrer">Sengalam</a>.
+          </p>
+
+          <p>
+            Film editing combines storytelling, timing, continuity and
+            performance. An editor shapes the relationship between scenes,
+            develops narrative rhythm and works with the filmmaking team
+            to bring a project to its final form.
+          </p>
+
+          <p>
+            His listed projects span different genres and formats, from
+            feature films to streaming content. This portfolio brings
+            together selected credits and professional information.
+          </p>
+
+          <h3 class="h4 text-white mt-4 mb-3">Professional Interests</h3>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="badge rounded-pill text-bg-primary p-2">Film Editing</span>
+            <span class="badge rounded-pill text-bg-success p-2">Storytelling</span>
+            <span class="badge rounded-pill text-bg-primary p-2">Post-Production</span>
+            <span class="badge rounded-pill text-bg-success p-2">Colour Grading</span>
+            <span class="badge rounded-pill text-bg-primary p-2">Filmmaking</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY INFORMATION -->
+    <section class="section reveal" id="information">
+      <div class="section-heading">
+        <span class="eyebrow">At a Glance</span>
+        <h2>Key <span class="gradient-text">Information</span></h2>
+        <p>An overview of selected work and areas of professional expertise.</p>
+      </div>
+
+      <div class="info-grid">
+        <article class="info-card">
+          <span class="number">01</span>
+          <h3>Film Editing</h3>
+          <p>Structuring scenes, managing continuity and developing the pace of a story.</p>
+        </article>
+        <article class="info-card">
+          <span class="number">02</span>
+          <h3>Feature Films</h3>
+          <p>Selected credits include Sundarapandian, Nayyapudai and Kombu Vatcha Singamda.</p>
+        </article>
+        <article class="info-card">
+          <span class="number">03</span>
+          <h3>Streaming Projects</h3>
+          <p>Sengalam is among the web-series credits associated with his career.</p>
+        </article>
+        <article class="info-card">
+          <span class="number">04</span>
+          <h3>Post-Production</h3>
+          <p>Editing, workflow coordination and collaboration across filmmaking teams.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- CAREER -->
+    <section class="section reveal" id="career">
+      <div class="section-heading">
+        <span class="eyebrow">Professional Journey</span>
+        <h2>Career <span class="gradient-text">Highlights</span></h2>
+        <p>Selected projects and milestones from the filmography.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <span class="year">2012</span>
+          <h3>Sundarapandian</h3>
+          <p>A Tamil feature film directed by S. R. Prabhakaran and an early editing credit.</p>
+        </article>
+        <article class="timeline-item">
+          <span class="year">2014</span>
+          <h3>Idhu Kathirvelan Kadhal</h3>
+          <p>A romantic comedy-drama among the selected film credits.</p>
+        </article>
+        <article class="timeline-item">
+          <span class="year">2016</span>
+          <h3>Nayyapudai</h3>
+          <p>A Tamil action film directed by S. A. Chandrasekhar.</p>
+        </article>
+        <article class="timeline-item">
+          <span class="year">2022</span>
+          <h3>Kombu Vatcha Singamda</h3>
+          <p>A Tamil film directed by S. R. Prabhakaran.</p>
+        </article>
+        <article class="timeline-item">
+          <span class="year">2023</span>
+          <h3>Sengalam</h3>
+          <p>A Tamil political thriller web series released on ZEE5.</p>
+        </article>
+      </div>
+
+      <div class="table-responsive mt-4">
+        <table class="table table-striped career-table">
+          <thead>
+            <tr><th scope="col">Project</th><th scope="col">Year</th><th scope="col">Format</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Sundarapandian</td><td>2012</td><td>Feature Film</td></tr>
+            <tr><td>Idhu Kathirvelan Kadhal</td><td>2014</td><td>Feature Film</td></tr>
+            <tr><td>Nayyapudai</td><td>2016</td><td>Feature Film</td></tr>
+            <tr><td>Kombu Vatcha Singamda</td><td>2022</td><td>Feature Film</td></tr>
+            <tr><td>Sengalam</td><td>2023</td><td>Web Series</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="small mt-3" style="color:var(--muted)">
+        Confirm official credits and release years against reliable
+        film-industry sources before publication.
+      </p>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="section reveal" id="expertise">
+      <div class="section-heading">
+        <span class="eyebrow">Craft & Creativity</span>
+        <h2>Editing and <span class="gradient-text">Filmmaking</span></h2>
+      </div>
+
+      <div class="card-dark prose">
+        <h3 class="h4 text-white">The Art of Film Editing</h3>
+        <p>
+          Editing is a key part of cinematic storytelling. The selection,
+          arrangement and timing of shots influence how audiences experience
+          characters, emotion and dramatic tension. Effective editing brings
+          performances, cinematography, music and sound into a coherent narrative.
+        </p>
+
+        <h3 class="h4 text-white mt-4">Post-Production Workflow</h3>
+        <p>
+          Modern post-production may involve non-linear editing systems,
+          colour correction, sound design, visual effects and collaboration
+          among several departments. The workflow varies according to each
+          project's creative requirements and delivery format.
+        </p>
+
+        <h3 class="h4 text-white mt-4">From Editing to Direction</h3>
+        <p>
+          Experience in editing can provide a valuable perspective on directing.
+          Understanding continuity, coverage and scene structure helps
+          filmmakers plan shots and anticipate how footage will work together.
+        </p>
+      </div>
+    </section>
+
+    <!-- AWARDS -->
+    <section class="section reveal" id="awards">
+      <div class="section-heading">
+        <span class="eyebrow">Recognition</span>
+        <h2>Awards & <span class="gradient-text">Achievements</span></h2>
+      </div>
+
+      <div class="award-card">
+        <h3>Film Credits and Recognition</h3>
+        <p>
+          This section is reserved for verified awards, nominations and
+          professional recognition. Add the award name, year, category and
+          an official source for each confirmed achievement.
+        </p>
+      </div>
+    </section>
+
+    <!-- ONLINE PRESENCE -->
+    <section class="section reveal" id="online">
+      <div class="section-heading">
+        <span class="eyebrow">Connect</span>
+        <h2>Online <span class="gradient-text">Presence</span></h2>
+        <p>Visit the listed social profiles and video channel.</p>
+      </div>
+
+      <div class="online-layout">
+        <div>
+          <img class="online-image"
+            src=".//images/b2.png"
+            alt="Film industry photograph"
+            loading="lazy">
+        </div>
+
+        <div class="card-dark">
+          <h3 class="h4 text-white mb-3">Social Profiles</h3>
+          <p class="prose">
+            Explore the following profiles for available updates,
+            professional information and film-related content.
+          </p>
+
+          <div class="social-grid">
+            <a class="social-link" href="https://www.instagram.com/biju_v_donbosco/"
+              target="_blank" rel="noopener noreferrer"><span>01</span> Instagram</a>
+            <a class="social-link" href="https://x.com/biju_v_donbosco"
+              target="_blank" rel="noopener noreferrer"><span>02</span> X / Twitter</a>
+            <a class="social-link" href="https://www.facebook.com/don.bosco.311493/"
+              target="_blank" rel="noopener noreferrer"><span>03</span> Facebook</a>
+            <a class="social-link" href="https://www.youtube.com/@bijuvdonboscoindianfilmedi1717"
+              target="_blank" rel="noopener noreferrer"><span>04</span> YouTube</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO SHOWCASE -->
+    <section class="section reveal" id="video">
+      <div class="section-heading">
+        <span class="eyebrow">Featured Video</span>
+        <h2>Video <span class="gradient-text">Showcase</span></h2>
+        <p>A dedicated space for a promotional or film-related video.</p>
+      </div>
+
+      <div class="video-frame">
+        <!-- Upload your video into the website's videos folder.
+             Rename it featured-video.mp4, or change the source below. -->
+        <video controls playsinline preload="metadata"
+          aria-label="Featured promotional video">
+          <source src="./videos/featured-video.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+
+        <div class="video-caption">
+          <p class="mb-2">Featured promotional video</p>
+          <a class="btn-primary-custom"
+            href="https://www.decathlon.in/"
+            target="_blank" rel="noopener noreferrer">
+            Visit Decathlon
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER ACTIVITIES -->
+    <section class="section reveal" id="activities">
+      <div class="section-heading">
+        <span class="eyebrow">Beyond the Edit</span>
+        <h2>Other <span class="gradient-text">Activities</span></h2>
+      </div>
+
+      <div class="card-dark prose">
+        <h3 class="h4 text-white">Workshops and Knowledge Sharing</h3>
+        <p>
+          This section can feature verified workshops, guest lectures,
+          editing demonstrations and training sessions. Include event
+          photographs, dates and organiser details when available.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="developer-footer">
+    <div class="footer-inner">
+      <div class="developer-info">
+        <img src="./john 2.jpeg"
+          alt="John Bosco, website developer"
+          loading="lazy">
+
+        <div>
+          <h2>Website Developed by <span class="gradient-text">John Bosco</span></h2>
+          <p>Web Design · HTML · CSS · JavaScript</p>
+          <p class="mt-2">
+            <a href="https://www.instagram.com/d_john_bosco/"
+              target="_blank" rel="noopener noreferrer">
+              Instagram: @d_john_bosco
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <p><strong class="text-white">Contact</strong></p>
+        <p>For enquiries, please use the official contact page.</p>
+        <a href="7200614883">7200614883</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; <span id="currentYear"></span> John Bosco. All rights reserved.
+      <p class="mt-2 mb-0">Designed with care for film and storytelling.</p>
+    </div>
+  </footer>
+
+  <button id="backToTop" type="button"
+    aria-label="Back to top" title="Back to top" hidden>↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      // Current year in the footer.
+      const yearElement = document.getElementById("currentYear");
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+
+      // Reveal content as it enters the viewport.
+      const revealElements = document.querySelectorAll(".reveal");
+
+      if (reduceMotion || !("IntersectionObserver" in window)) {
+        revealElements.forEach(element => {
+          element.classList.add("visible");
+        });
+      } else {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.06,
+          rootMargin: "0px 0px -25px 0px"
+        });
+
+        revealElements.forEach(element => {
+          revealObserver.observe(element);
+        });
+      }
+
+      // Back-to-top button.
+      const backToTop = document.getElementById("backToTop");
+
+      if (backToTop) {
+        const updateBackToTop = () => {
+          const shouldShow = window.scrollY > 450;
+          backToTop.classList.toggle("show", shouldShow);
+          backToTop.hidden = !shouldShow;
+        };
+
+        window.addEventListener("scroll", updateBackToTop, {
+          passive: true
+        });
+
+        updateBackToTop();
+
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: reduceMotion ? "auto" : "smooth"
+          });
+        });
+      }
+
+      // Close the Bootstrap mobile menu after selecting a link.
+      const navbar = document.getElementById("mainNavbar");
+
+      if (navbar) {
+        navbar.querySelectorAll(".nav-link").forEach(link => {
+          link.addEventListener("click", () => {
+            if (
+              navbar.classList.contains("show") &&
+              window.bootstrap &&
+              window.bootstrap.Collapse
+            ) {
+              window.bootstrap.Collapse
+                .getOrCreateInstance(navbar)
+                .hide();
+            }
+          });
+        });
+      }
+
+      // Update the active navigation link for sections on this page.
+      const sectionLinks = Array.from(
+        document.querySelectorAll(
+          '#mainNavbar a.nav-link[href^="#"]'
+        )
+      );
+
+      const trackedSections = sectionLinks
+        .map(link => document.querySelector(link.getAttribute("href")))
+        .filter(Boolean);
+
+      if ("IntersectionObserver" in window && trackedSections.length) {
+        const sectionObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            sectionLinks.forEach(link => {
+              const active = link.getAttribute("href") ===
+                "#" + entry.target.id;
+
+              link.classList.toggle("active", active);
+
+              if (active) {
+                link.setAttribute("aria-current", "location");
+              } else {
+                link.removeAttribute("aria-current");
+              }
+            });
+          });
+        }, {
+          rootMargin: "-20% 0px -65% 0px",
+          threshold: 0
+        });
+
+        trackedSections.forEach(section => {
+          sectionObserver.observe(section);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

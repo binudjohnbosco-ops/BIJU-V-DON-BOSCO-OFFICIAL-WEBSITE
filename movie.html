@@ -1,0 +1,808 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+
+  <title>Movies | Biju V Don Bosco Official Website</title>
+
+  <meta name="description"
+    content="Explore the filmography and notable movie projects of Biju V Don Bosco, film editor and filmmaker in South Indian cinema.">
+
+  <link rel="icon" href="./images/LOGO.jpg">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #05080d;
+      --panel: #0c1420;
+      --panel-light: #111e2d;
+      --blue: #00bfff;
+      --green: #00d084;
+      --text: #f4f7fb;
+      --muted: #aab6c5;
+      --border: rgba(255, 255, 255, .10);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* HEADER */
+    .site-heading {
+      position: relative;
+      overflow: hidden;
+      padding: 55px 20px;
+      text-align: center;
+      border: 1px solid rgba(0, 191, 255, .25);
+      border-radius: 20px;
+      background:
+        radial-gradient(ellipse at top left,
+          rgba(0, 191, 255, .18), transparent 50%),
+        linear-gradient(135deg, #101b2a, #07111f 70%);
+      box-shadow: 0 15px 45px rgba(0, 0, 0, .35);
+    }
+
+    .site-heading h1 {
+      margin-bottom: 15px;
+      color: white;
+      font-size: clamp(1.7rem, 4vw, 3rem);
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .site-heading h1 span {
+      color: var(--blue);
+    }
+
+    .site-heading p {
+      max-width: 850px;
+      margin: auto;
+      color: var(--muted);
+      font-size: clamp(.95rem, 2vw, 1.15rem);
+      line-height: 1.8;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 7px 14px;
+      color: var(--green);
+      border: 1px solid rgba(0, 208, 132, .35);
+      border-radius: 50px;
+      background: rgba(0, 208, 132, .07);
+      font-size: .75rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* NAVIGATION */
+    .main-navbar {
+      position: sticky;
+      top: 10px;
+      z-index: 1000;
+      margin: 0 0 25px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(8, 15, 24, .94);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, .3);
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white !important;
+      font-weight: 800;
+      letter-spacing: .8px;
+    }
+
+    .navbar-brand img {
+      width: 42px;
+      height: 42px;
+      border: 2px solid var(--blue);
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, .35);
+    }
+
+    .navbar-toggler:focus {
+      box-shadow: 0 0 0 3px rgba(0, 191, 255, .2);
+    }
+
+    .navbar .nav-link {
+      margin: 4px;
+      padding: 10px 14px !important;
+      color: #d4deea !important;
+      border-radius: 8px;
+      font-size: .9rem;
+      font-weight: bold;
+      transition: .25s ease;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .nav-link.active {
+      color: var(--blue) !important;
+      background: rgba(0, 191, 255, .09);
+    }
+
+    /* BANNER */
+    .banner-wrap {
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 55px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--panel);
+    }
+
+    .main-banner {
+      display: block;
+      width: 100%;
+      height: clamp(220px, 45vw, 560px);
+      object-fit: cover;
+      object-position: center;
+      opacity: .82;
+      transition: transform .7s ease, opacity .5s ease;
+    }
+
+    .banner-wrap:hover .main-banner {
+      transform: scale(1.025);
+      opacity: 1;
+    }
+
+    .banner-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: end;
+      padding: clamp(20px, 5vw, 50px);
+      background: linear-gradient(0deg,
+          rgba(5, 8, 13, .9),
+          rgba(5, 8, 13, .05) 75%);
+    }
+
+    .banner-overlay h2 {
+      margin: 0;
+      color: white;
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      font-weight: 800;
+    }
+
+    .banner-overlay h2 span {
+      color: var(--blue);
+    }
+
+    /* SECTION HEADING */
+    .section-heading {
+      margin-bottom: 12px;
+      color: white;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .section-heading span {
+      color: var(--blue);
+    }
+
+    .section-description {
+      margin-bottom: 30px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* MOVIE CARDS */
+    .movie-card {
+      height: 100%;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: linear-gradient(145deg, var(--panel-light), var(--panel));
+      box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+      transition: transform .3s ease, border-color .3s ease,
+        box-shadow .3s ease;
+    }
+
+    .movie-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(0, 191, 255, .55);
+      box-shadow: 0 16px 35px rgba(0, 191, 255, .09);
+    }
+
+    .poster-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 320px;
+      overflow: hidden;
+      padding: 12px;
+      background:
+        radial-gradient(ellipse at center,
+          rgba(0, 191, 255, .08), transparent 70%),
+        #080d15;
+    }
+
+    .poster-wrap img {
+      display: block;
+      max-width: 100%;
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+      transition: transform .4s ease;
+    }
+
+    .movie-card:hover .poster-wrap img {
+      transform: scale(1.035);
+    }
+
+    .movie-status {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      z-index: 1;
+      padding: 7px 11px;
+      color: #07111f;
+      border-radius: 50px;
+      background: var(--green);
+      font-size: .7rem;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .movie-status.upcoming {
+      background: #ffc857;
+    }
+
+    .movie-status.released {
+      color: white;
+      background: #1769aa;
+    }
+
+    .movie-info {
+      padding: 20px;
+    }
+
+    .movie-info h3 {
+      margin-bottom: 14px;
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 800;
+      line-height: 1.5;
+    }
+
+    .movie-info h3 span {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .78rem;
+      font-weight: normal;
+    }
+
+    .movie-info p {
+      margin-bottom: 9px;
+      color: #c4cfdd;
+      font-size: .9rem;
+      line-height: 1.7;
+    }
+
+    .movie-info strong {
+      color: white;
+    }
+
+    .movie-description {
+      margin-top: 10px;
+      color: var(--muted) !important;
+    }
+
+    .movie-divider {
+      height: 1px;
+      margin: 15px 0;
+      background: var(--border);
+    }
+
+    /* MOVIE COUNT */
+    .movie-summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      margin-bottom: 25px;
+      padding: 18px 20px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--panel);
+    }
+
+    .movie-summary p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .movie-count {
+      color: var(--blue);
+      font-size: 1.2rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      margin-top: 70px;
+      padding: 35px 15px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      background: #080d15;
+    }
+
+    .footer-title {
+      margin-bottom: 12px;
+      color: white;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .footer-title span {
+      color: var(--blue);
+    }
+
+    .site-footer p {
+      margin-bottom: 8px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .site-footer a {
+      color: var(--blue);
+      font-weight: bold;
+      transition: color .2s ease;
+    }
+
+    .site-footer a:hover {
+      color: var(--green);
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 999;
+      display: none;
+      width: 45px;
+      height: 45px;
+      color: #06101a;
+      border: 0;
+      border-radius: 50%;
+      background: var(--blue);
+      font-size: 1.25rem;
+      font-weight: bold;
+      box-shadow: 0 5px 20px rgba(0, 191, 255, .2);
+      cursor: pointer;
+    }
+
+    .back-to-top:hover {
+      background: var(--green);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 767px) {
+      .site-heading {
+        padding: 35px 18px;
+      }
+
+      .poster-wrap {
+        height: 300px;
+      }
+
+      .movie-info {
+        padding: 17px;
+      }
+
+      .banner-wrap {
+        margin-bottom: 38px;
+      }
+
+      .movie-summary {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding-right: 16px;
+        padding-left: 16px;
+      }
+
+      .poster-wrap {
+        height: 280px;
+      }
+
+      .navbar-brand {
+        font-size: .84rem;
+      }
+
+      .navbar-brand img {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    /* ACCESSIBILITY */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body id="top">
+
+  <div class="container-fluid px-3 px-md-4 pt-4 pb-2">
+    <header class="site-heading">
+      <div class="eyebrow">OFFICIAL FILMOGRAPHY</div>
+
+      <h1>BIJU V DON BOSCO <span>OFFICIAL SITE</span></h1>
+
+      <p>
+        Discover the films and screen projects associated with
+        Biju V Don Bosco, a creative professional in South Indian cinema.
+      </p>
+    </header>
+  </div>
+
+  <!-- NAVIGATION -->
+  <div class="container-fluid px-3 px-md-4">
+    <nav class="navbar navbar-expand-lg navbar-dark main-navbar px-3">
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html">
+          <img src="./images/LOGO.jpg" alt="Biju V Don Bosco logo">
+          BIJU V DON BOSCO
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="movie.html">MOVIES</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="interview.html">INTERVIEW</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <main class="container">
+
+    <!-- BANNER -->
+    <section class="banner-wrap" aria-label="Website banner">
+      <img src="./images/backdrop.jpg" alt="Biju V Don Bosco cinema banner" class="main-banner">
+
+      <div class="banner-overlay">
+        <div>
+          <div class="eyebrow">CINEMA • CREATIVITY • STORYTELLING</div>
+          <h2>THE WORLD OF <span>CINEMA</span></h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOVIE COLLECTION -->
+    <section id="filmography">
+      <h2 class="section-heading">NOTABLE <span>FILMS</span></h2>
+
+      <p class="section-description">
+        Explore selected films and screen projects from the filmography.
+        Select projects are marked as upcoming.
+      </p>
+
+      <div class="movie-summary">
+        <p>Selected movies and screen projects</p>
+        <div class="movie-count">11 PROJECTS</div>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- 1 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status upcoming">UPCOMING</span>
+              <img src="./images/GOOLMAL.jpg" alt="Golmaal movie poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>GOLMAAL <span>Upcoming project</span></h3>
+              <div class="movie-divider"></div>
+              <p><strong>Director:</strong> Pon Kumaran</p>
+              <p><strong>Stars:</strong> Jiiva, Mirchi Shiva</p>
+              <p class="movie-description">
+                Tamil comedy film produced by Biju V Don Bosco.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status upcoming">UPCOMING</span>
+              <img src="./images/RAKKAI MULAITEN.jpg" alt="Rakkai Mulaithen movie poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>RAKKAI MULAITHEN <span>Upcoming project</span></h3>
+              <div class="movie-divider"></div>
+              <p><strong>Director:</strong> S. R. Prabhakaran</p>
+              <p><strong>Stars:</strong> Tanya Ravichandran</p>
+              <p class="movie-description">
+                Tamil crime thriller film.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status upcoming">UPCOMING</span>
+              <img src="./images/aganya.jpg" alt="Aganya movie poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>AGANYA <span>Upcoming project</span></h3>
+              <div class="movie-divider"></div>
+              <p class="movie-description">
+                Tamil crime thriller film.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 4 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status released">2024</span>
+              <img src="./images/7G.jpg" alt="7G movie poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>7/G <span>2024</span></h3>
+              <div class="movie-divider"></div>
+              <p><strong>Director:</strong> Haroon</p>
+              <p><strong>Stars:</strong> Sonia Agarwal, Smruthi Venkat</p>
+              <p class="movie-description">
+                Tamil-language horror film.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status released">2023</span>
+              <img src="./images/SENGALAM 2.jpg" alt="Sengalam series poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>SENGALAM <span>2023</span></h3>
+              <div class="movie-divider"></div>
+              <p><strong>Director:</strong> S. R. Prabhakaran</p>
+              <p class="movie-description">
+                Political thriller streaming series for ZEE5.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status released">2023</span>
+              <img src="./images/NAAN KADAVUL ILLAI.jpg" alt="Naan Kadavul Illai movie poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>NAAN KADAVUL ILLAI <span>2023</span></h3>
+              <div class="movie-divider"></div>
+              <p><strong>Director:</strong> S. A. Chandrasekhar</p>
+              <p><strong>Stars:</strong> Samuthirakani, Sakshi Agarwal</p>
+              <p class="movie-description">
+                Vigilante action film.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 7 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status released">2022</span>
+              <img src="./images/SINGAM DA.jpg" alt="Kombu Vacha Singam Da movie poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>KOMBU VACHA SINGAM DA <span>2022</span></h3>
+              <div class="movie-divider"></div>
+              <p><strong>Director:</strong> S. R. Prabhakaran</p>
+              <p class="movie-description">
+                Tamil action drama film.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 8 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status released">2016</span>
+              <img src="./images/NAIYAPUDDAI.jpg" alt="Nayyapudai movie poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>NAYYAPUDAI <span>2016</span></h3>
+              <div class="movie-divider"></div>
+              <p><strong>Director:</strong> Vijay Kiran</p>
+              <p><strong>Stars:</strong> S. A. Chandrasekhar, Pa. Vijay, M. S. Bhaskar, Chandini Tamilarasan</p>
+              <p class="movie-description">
+                Tamil action film.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 9 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status released">2015</span>
+              <img src="./images/DARANI.jpg" alt="Dharani movie poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>DHARANI <span>2015</span></h3>
+              <div class="movie-divider"></div>
+              <p><strong>Director:</strong> Guhan Sambandham</p>
+              <p><strong>Producer:</strong> V. G. S. Narendran</p>
+              <p class="movie-description">
+                Tamil-language film.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 10 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status released">2014</span>
+              <img src="./images/KATHIR KADHAL.jpg" alt="Ithu Kathirvelan Kadhal movie poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>ITHU KATHIRVELAN KADHAL <span>2014</span></h3>
+              <div class="movie-divider"></div>
+              <p><strong>Director:</strong> S. R. Prabhakaran</p>
+              <p><strong>Stars:</strong> Udhayanidhi Stalin, Nayanthara</p>
+              <p class="movie-description">
+                Tamil romantic comedy-drama film.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <!-- 11 -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <article class="movie-card">
+            <div class="poster-wrap">
+              <span class="movie-status released">2012</span>
+              <img src="./images/SUNDAR.jpg" alt="Sundarapandian movie poster" loading="lazy">
+            </div>
+            <div class="movie-info">
+              <h3>SUNDARAPANDIAN <span>2012</span></h3>
+              <div class="movie-divider"></div>
+              <p><strong>Director:</strong> S. R. Prabhakaran</p>
+              <p class="movie-description">
+                Tamil action comedy-drama film.
+              </p>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-title">BIJU V DON BOSCO <span>OFFICIAL SITE</span></div>
+
+    <p>Film Editor | Creative Professional | Director</p>
+
+    <p>
+      Page Developed By
+      <a href="https://www.instagram.com/d_john_bosco/" target="_blank" rel="noopener noreferrer">
+        BINU. D. JOHN BOSCO
+      </a>
+    </p>
+
+    <p>&copy; <span id="currentYear"></span> Biju V Don Bosco. All rights reserved.</p>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Automatically update the copyright year
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
+
+    // Show the back-to-top button after scrolling
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", function () {
+      backToTop.style.display = window.scrollY > 350 ? "block" : "none";
+    });
+
+    backToTop.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+</body>
+
+</html>
+```
