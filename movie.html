@@ -501,7 +501,21 @@
     .banner-overlay{background:linear-gradient(0deg,rgba(42,31,19,.76),rgba(42,31,19,0) 75%)!important}
     .banner-overlay h2{color:#fff!important}.video-label{background:rgba(51,41,31,.82)!important}
     ::selection{background:#e8d9bd;color:#33291f}
-  </style>
+      /* Give the banner a soft ivory finish instead of a strong red cast. */
+    .main-banner {
+      filter: sepia(.16) saturate(.62) hue-rotate(350deg) brightness(1.06);
+    }
+    .banner-wrap {
+      background: #fff8e8 !important;
+      border-color: #e2d3b9 !important;
+    }
+    .banner-overlay {
+      background: linear-gradient(0deg, rgba(42,31,19,.58), rgba(255,248,232,.10) 78%) !important;
+    }
+    .banner-overlay .eyebrow {
+      background: rgba(255,253,247,.88) !important;
+    }
+</style>
 
 </head>
 
