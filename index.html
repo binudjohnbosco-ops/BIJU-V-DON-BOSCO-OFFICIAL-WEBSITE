@@ -920,6 +920,43 @@
     ::selection{background:#e8d9bd;color:#33291f}
   </style>
 
+
+  <style id="career-highlights-ivory-fix">
+    /* Career Highlights table: keep every row in the cream / ivory / white palette */
+    .career-table,
+    .career-table.table,
+    .career-table tbody,
+    .career-table tr,
+    .career-table td {
+      background-color: #fffdf7 !important;
+      color: #493a29 !important;
+      --bs-table-bg: #fffdf7;
+      --bs-table-color: #493a29;
+      --bs-table-striped-bg: #f7efdf;
+      --bs-table-striped-color: #493a29;
+      --bs-table-hover-bg: #f4ead8;
+      --bs-table-hover-color: #33291f;
+      border-color: #e2d3b9 !important;
+    }
+    .career-table thead th,
+    .career-table th {
+      background: #f4ead8 !important;
+      color: #76572b !important;
+      border-color: #e2d3b9 !important;
+    }
+    .career-table tbody tr:nth-child(even) td {
+      background-color: #fff8e8 !important;
+    }
+    .career-table tbody tr:hover td {
+      background-color: #f4ead8 !important;
+      color: #33291f !important;
+    }
+    .table-responsive:has(.career-table) {
+      background: #fffdf7 !important;
+      border-color: #e2d3b9 !important;
+    }
+  </style>
+
 </head>
 
 <body>
