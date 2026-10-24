@@ -246,6 +246,23 @@
             background: #000;
         }
 
+        .thumbnail-link {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .thumbnail-link .interview-video {
+            transition: transform .35s ease, filter .35s ease;
+        }
+
+        .thumbnail-link:hover .interview-video,
+        .thumbnail-link:focus-visible .interview-video {
+            transform: scale(1.035);
+            filter: brightness(.78);
+        }
+
         .video-label {
             position: absolute;
             top: 12px;
@@ -509,17 +526,10 @@
                 <div class="col-12 col-sm-6 col-lg-4">
                     <article class="interview-card">
                         <div class="video-wrap">
-                            <span class="video-label">MEDIA INTERVIEW</span>
-                            <video class="interview-video"
-                                   controls
-                                   muted
-                                   playsinline
-                                   preload="metadata"
-                                   poster="./images/backdrop.jpg">
-                                <source src="./Nakkheeran_Interview_Biju_V_Don_Bosco.mp4"
-                                        type="video/mp4">
-                                Your browser does not support HTML video.
-                            </video>
+                            <a class="thumbnail-link" href="https://youtu.be/vKQoCAiWCss" target="_blank" rel="noopener noreferrer" aria-label="Open Nakkheeran interview">
+                                <img class="interview-video" src="./nakeeran.png" alt="Nakkheeran interview thumbnail" loading="lazy">
+                                <span class="video-label">MEDIA INTERVIEW · ▶ OPEN INTERVIEW</span>
+                            </a>
                         </div>
 
                         <div class="interview-body">
@@ -542,17 +552,10 @@
                 <div class="col-12 col-sm-6 col-lg-4">
                     <article class="interview-card">
                         <div class="video-wrap">
-                            <span class="video-label">TELEVISION</span>
-                            <video class="interview-video"
-                                   controls
-                                   muted
-                                   playsinline
-                                   preload="metadata"
-                                   poster="./images/backdrop.jpg">
-                                <source src="./Jaya_TV_Interview_Biju_V_Don_Bosco.mp4"
-                                        type="video/mp4">
-                                Your browser does not support HTML video.
-                            </video>
+                            <a class="thumbnail-link" href="https://youtu.be/a620B0Gg5vI" target="_blank" rel="noopener noreferrer" aria-label="Open Jaya TV interview">
+                                <img class="interview-video" src="./jaya%20tv.png" alt="Jaya TV interview thumbnail" loading="lazy">
+                                <span class="video-label">TELEVISION · ▶ OPEN INTERVIEW</span>
+                            </a>
                         </div>
 
                         <div class="interview-body">
@@ -575,17 +578,10 @@
                 <div class="col-12 col-sm-6 col-lg-4">
                     <article class="interview-card">
                         <div class="video-wrap">
-                            <span class="video-label">FILMMAKING</span>
-                            <video class="interview-video"
-                                   controls
-                                   muted
-                                   playsinline
-                                   preload="metadata"
-                                   poster="./images/backdrop.jpg">
-                                <source src="./Inspiring_Icon_Editor_Biju_V_Don_Bosco_Part_1.mp4"
-                                        type="video/mp4">
-                                Your browser does not support HTML video.
-                            </video>
+                            <a class="thumbnail-link" href="https://youtu.be/PG7lWOE3hUw" target="_blank" rel="noopener noreferrer" aria-label="Open Play House Filmfactory Part 1">
+                                <img class="interview-video" src="./playhouse-part1.png" alt="Play House Filmfactory Part 1 thumbnail" loading="lazy">
+                                <span class="video-label">FILMMAKING · ▶ OPEN INTERVIEW</span>
+                            </a>
                         </div>
 
                         <div class="interview-body">
@@ -609,17 +605,10 @@
                 <div class="col-12 col-sm-6 col-lg-4">
                     <article class="interview-card">
                         <div class="video-wrap">
-                            <span class="video-label">PART 2</span>
-                            <video class="interview-video"
-                                   controls
-                                   muted
-                                   playsinline
-                                   preload="metadata"
-                                   poster="./images/backdrop.jpg">
-                                <source src="./Inspiring_Icon_Editor_Biju_V_Don_Bosco_Part_2_Episode_1.mp4"
-                                        type="video/mp4">
-                                Your browser does not support HTML video.
-                            </video>
+                            <a class="thumbnail-link" href="https://youtu.be/M55N_rO4yMQ" target="_blank" rel="noopener noreferrer" aria-label="Open Play House Filmfactory Part 2">
+                                <img class="interview-video" src="./playhouse-part2.png" alt="Play House Filmfactory Part 2 thumbnail" loading="lazy">
+                                <span class="video-label">PART 2 · ▶ OPEN INTERVIEW</span>
+                            </a>
                         </div>
 
                         <div class="interview-body">
@@ -643,17 +632,10 @@
                 <div class="col-12 col-sm-6 col-lg-4">
                     <article class="interview-card">
                         <div class="video-wrap">
-                            <span class="video-label">STUDIO TOUR</span>
-                            <video class="interview-video"
-                                   controls
-                                   muted
-                                   playsinline
-                                   preload="metadata"
-                                   poster="./images/backdrop.jpg">
-                                <source src="./AVM_Studio_Inside_Tour_Biju_V_Don_Bosco.mp4"
-                                        type="video/mp4">
-                                Your browser does not support HTML video.
-                            </video>
+                            <a class="thumbnail-link" href="./AVM_Studio_Inside_Tour_Biju_V_Don_Bosco.mp4" target="_blank" rel="noopener noreferrer" aria-label="Open AVM Studio inside tour">
+                                <img class="interview-video" src="./avm%20%20home%20tour.png" alt="AVM Studio inside tour thumbnail" loading="lazy">
+                                <span class="video-label">STUDIO TOUR · ▶ OPEN VIDEO</span>
+                            </a>
                         </div>
 
                         <div class="interview-body">
