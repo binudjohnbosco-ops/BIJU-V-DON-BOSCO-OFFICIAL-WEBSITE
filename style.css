@@ -181,3 +181,7 @@ select:focus {
   margin-top: 0.5rem;
   font-weight: 600;
 }
+
+/* Cream, ivory and white palette */
+:root{--bg:#fffaf0;--surface:#fffdf7;--surface-2:#f4ead8;--text:#33291f;--muted:#6f6252;--accent:#b89a63}
+body{background:#fffaf0!important;color:#33291f!important}nav{background:#fffdf7!important}ul li a{color:#493a29!important}ul li a:hover{background:#f4ead8!important;color:#76572b!important}form{background:#fffdf7!important;color:#33291f!important;border:1px solid #e2d3b9}.button{background:#c6ad7b!important;color:#33291f!important}
